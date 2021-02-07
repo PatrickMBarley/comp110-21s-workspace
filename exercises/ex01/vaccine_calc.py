@@ -17,17 +17,17 @@ from datetime import datetime
 from datetime import timedelta
 
 
-Pop: int = int(input(":Input population size: "))
-Doses_admin: int = int(input(":Input doses already administered: "))
-Doses_day: int = int(input(":Input doses per day: "))
-Target_Percent: int = int(input(":Input target vaccination percent: "))
+Pop: int = int(input("Input population size: "))
+Doses_admin: int = int(input("Input doses already administered: "))
+Doses_day: int = int(input("Input doses per day: "))
+Target_Percent: int = int(input("Input target vaccination percent: "))
 today: datetime = datetime.today()
 
-Days: int = int((((Target_Percent * Pop * 2) / 100) - Doses_admin) / Doses_day)
-
+Days: int = int(round((((Target_Percent * Pop * 2) / 100) - Doses_admin) / Doses_day))
+print(Days)
 future: timedelta = timedelta(Days)
 
 VaccineDate: datetime = today + future
+print(VaccineDate)
 
-print("We will reach " + str(Target_Percent) + "% vaccination in " 
-+ str(Days) + " days, which falls on " + VaccineDate.strftime("%B %d, %Y")) 
+print("We will reach " + str(Target_Percent) + "% vaccination in " + str(Days) + " days, which falls on " + VaccineDate.strftime("%B %d, %Y")) 
