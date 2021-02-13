@@ -25,6 +25,7 @@ today: datetime = datetime.today()
 
 Days: int = int(round((((Target_Percent * Pop * 2) / 100) - Doses_admin) / Doses_day))
 print(Days)
+
 future: timedelta = timedelta(Days)
 
 VaccineDate: datetime = today + future

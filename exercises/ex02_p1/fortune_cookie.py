@@ -13,6 +13,7 @@ def main() -> None:
 
 
 def fortune_cookie() -> str:
+    """Generates a random integer value between 1 and 5 and generates a unique fortune for that integer."""
     fortuneval: int = int(randint(1, 5))
     fortune1: str = str("It's a good day to be a Tar Heel!")
     fortune2: str = str("404: Fortune Not Found.")
@@ -32,6 +33,7 @@ def fortune_cookie() -> str:
                     return fortune4
                 else:
                     return fortune5
+
 
 # Python Idiom for "starting" the program when run as a module.
 # The special dunder variable __name__ will be "__main__" when run as module. 
