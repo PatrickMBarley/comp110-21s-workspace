@@ -30,3 +30,4 @@ else:
                 print("Mmm, Monkey.")
 
 print("Now, go spread positive vibes!")
+print(chr(129312))
