@@ -79,3 +79,26 @@ def count(values: list[str]) -> dict[str, int]:
             counts[item] = 1
 
     return counts
+
+def no_experience(col: list[str]) -> list[bool]:
+    result: list[bool] = []
+    for item in col:
+        if item == "None to less than one month!":
+            result.append(True)
+        else:
+            result.append(False)
+    return result
+
+def masked(col: list[str], mask: list[bool]) -> list[str]:
+    result: list[str] = []
+    for i in range(len(mask)):
+        if mask[i]:
+            result.append(col[i])
+    return result
+
+def not_masked(col: list[str], mask: list[bool]) -> list[str]:
+    result: list[str] = []
+    for i in range(len(mask)):
+        if not mask[i]:
+            result.append(col[i])
+    return result   
